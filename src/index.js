@@ -60,6 +60,6 @@ const novo = MongoClient (uri, { useNewUrlParser: true });
     console.log('a user is connected')
   })
   
-  
-
-app.listen(3000);
+  const server = http.listen(3000, () => {
+    console.log('server is running on port', server.address().port);
+  });
