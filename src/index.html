@@ -20,7 +20,7 @@
         <br>
         <button id="send" class="btn btn-success">Send</button>
     </div>
-    <div id="messages">
+    <div id="message">
     </div>
 </div>
 <script>
@@ -31,7 +31,7 @@
         })
         getMessages()
     })
-    socket.on('message', addMessages)
+    socket.on('messages', addMessages)
     function addMessages(message){
         $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
     }
