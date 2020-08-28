@@ -1,0 +1,17 @@
+versão : 0.0
+os : linux
+arquivos :
+  - fonte : /index.html
+    destino : / var / www / html /
+ganchos :
+  BeforeInstall :
+    - localização : scripts / install_dependencies
+      tempo limite : 300
+      runas : root
+    - localização : scripts / start_server
+      tempo limite : 300
+      runas : root
+  ApplicationStop :
+    - localização : scripts / stop_server
+      tempo limite : 300
+      runas : root
